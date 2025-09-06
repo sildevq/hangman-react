@@ -46,7 +46,7 @@ function Keyboard({
   disabled = false,
 }: KeyboardProps) {
   return (
-    <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(75px,_1fr))] gap-2">
+    <div className="w-[75%] mx-auto grid grid-cols-[repeat(auto-fill,_minmax(75px,_1fr))] gap-2">
       {KEYS.map((key, index) => {
         const isCorrect = correctLetters.includes(key);
         const isIncorrect = incorrectLetters.includes(key);

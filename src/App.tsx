@@ -76,10 +76,10 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-3">
+    <div className="flex flex-col items-center gap-5 p-5">
       <div className="text-2xl text-black text-center">
-        {isLoser && "You lose! Refresh to try again"}
-        {isWinner && "You win! Refresh to try again"}
+        {isLoser && "❌ You lose! Press Enter or refresh to try again"}
+        {isWinner && "🎉 You win! Press Enter or to try again"}
       </div>
       <HangmanDrawing numberOfIncorrectGuesses={incorrectLetters.length} />
       <HangmanWord

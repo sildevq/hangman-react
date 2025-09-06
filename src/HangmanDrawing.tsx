@@ -45,8 +45,9 @@ function HangmanDrawing({ numberOfIncorrectGuesses }: HangmanDrawingProps) {
   return (
     <div className="relative">
       <Gallows />
-      {/* ! Исправить предупреждения с key */}
-      {BODY_PARTS.slice(0, numberOfIncorrectGuesses)}
+      {BODY_PARTS.slice(0, numberOfIncorrectGuesses).map((Part, index) => (
+        <React.Fragment key={index}>{Part}</React.Fragment>
+      ))}
     </div>
   );
 }
